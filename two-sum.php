@@ -7,18 +7,27 @@ class Solution {
      * @param Integer $target
      * @return Integer[]
      */
-    function twoSum($nums, $target) {
-        $result=0;
-
-        echo $result;
+    function twoSum($nums, $target) {      
+        $_n=0;
+        foreach($nums as $k=>$num){
+            $_n=$target-$num;            
+            $_f=$nums;
+            unset($_f[$k]);            
+            foreach($_f as $_k=> $f){
+                if($f==$_n){
+                    return [$k,$_k];
+                }
+            }
+                       
+        }
     }
 }
 
 $test1=new Solution();
-$test1->twoSum([2,7,11,15],9);
+print_r($test1->twoSum([2,7,11,15],18));
 
 $test2=new Solution();
-$test2->twoSum([3,2,4],6);
+print_r($test2->twoSum([3,2,4],6));
 
 $test3=new Solution();
-$test3->twoSum([3,3],6);
+print_r($test3->twoSum([3,3],6));
