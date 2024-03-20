@@ -8,17 +8,16 @@
  */
 function arrangeCoins($n)
 {
-    
-    $counter=1;
 
-    while($counter<$n){
-        
-        $n=$n-$counter;
+    $counter = 1;
 
-        if($n>$counter){
+    while ($counter < $n) {
+
+        $n = $n - $counter;
+
+        if ($n > $counter) {
             $counter++;
         }
-
     }
 
     return $counter;
