@@ -1,6 +1,8 @@
 <?php
 
 /**
+ * problem: https://leetcode.com/problems/merge-sorted-array
+ * date: 22.03.2024
  * @param int[] $nums1
  * @param int $m
  * @param int[] $nums2
