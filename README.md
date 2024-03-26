@@ -9,6 +9,6 @@ I am Akromjon, a PHP dev and obsessed with Leetcode problems recently, and solvi
 
 Leetcode Profile: https://leetcode.com/akromjon <br>
 LinkedIn: https://www.linkedin.com/in/akromjon <br>
-email: akyprog@gmail.com <br>
+Email: akyprog@gmail.com <br>
 
 
