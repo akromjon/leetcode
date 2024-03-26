@@ -7,11 +7,22 @@
  * @param int $num
  * @return int
  */
+
+function addDigitsWith0($num)
+{
+    if ($num == 0) {
+        return 0;
+    }
+    if ($num % 9 == 0) {
+        return 9;
+    }
+    return $num % 9;
+}
 function addDigits($num)
 {
     if ($num <= 9) {
-        
-       return $num;
+
+        return $num;
     }
 
     $arr = [];
@@ -37,7 +48,7 @@ function addDigits($num)
         $counter++;
     }
 
-    return $arr[count($arr)-1];
+    return $arr[count($arr) - 1];
 }
 
 echo addDigits(10);
