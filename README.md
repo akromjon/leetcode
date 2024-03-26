@@ -7,8 +7,8 @@ I am Akromjon, a PHP dev and obsessed with Leetcode problems recently, and solvi
  - [MEDIUM](https://github.com/akromjon/leetcode-php/tree/main/medium)
  - [HARD](https://github.com/akromjon/leetcode-php/tree/main/hard)
 
-Leetcode Profile: https://leetcode.com/akromjon
-LinkedIn: https://www.linkedin.com/in/akromjon
-email: akyprog@gmail.com
+Leetcode Profile: https://leetcode.com/akromjon <br>
+LinkedIn: https://www.linkedin.com/in/akromjon <br>
+email: akyprog@gmail.com <br>
 
 
