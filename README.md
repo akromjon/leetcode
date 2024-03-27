@@ -1,7 +1,7 @@
-# Welcome to Leetcode problem solutions in PHP and SQL!
+# Leetcode - solutions in PHP and SQL!
 
 Hi there!,
-I am Akromjon, a PHP dev and obsessed with Leetcode problems recently, and solving on daily basis. 
+I am Akromjon, a PHP dev and obsessed with Leetcode problems recently and solving them daily. 
 
  - [EASY](https://github.com/akromjon/leetcode-php/tree/main/easy)
  - [MEDIUM](https://github.com/akromjon/leetcode-php/tree/main/medium)
