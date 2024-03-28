@@ -1,42 +1,26 @@
 <?php
+
 /**
- * https://leetcode.com/problems/longest-palindromic-substring/
- * Constraints:
- * 1 <= s.length <= 1000
- * s consist of only digits and English letters.
- */ 
-class Solution {
+ * problem: https://leetcode.com/problems/longest-palindromic-substring
+ * date: 28.03.2024
+ * @param string $s
+ * @return string
+ */
+function longestPalindrome($s)
+{
+    $str = "";
 
-    /**
-     * @param String $s
-     * @return String
-     */
-    function longestPalindrome($s) {
-
+    for ($i = 0; $i < strlen($s); $i++) {
         
-        $wc=strlen($s);
-
-        if(!($wc>=1 || $wc<=1000)){
-            return $s;
-        }
-
-        $w="";
-
-        for($a=0; $a<$wc;$a++){
-            $w=$s[$a];
-            for($b=$a;$b<$wc;$b++){
-                if($w==$s[$b]){
-                    
-                }
-            }
-        }
-
-        return $s;
     }
 }
+echo longestPalindrome("babad"); // bab
 
-$test1=new Solution;
-$test1->longestPalindrome("babad"); // bad, aba
+// Example 1:
+// Input: s = "babad"
+// Output: "bab"
+// Explanation: "aba" is also a valid answer.
 
-// $test2=new Solution;
-// $test2->longestPalindrome("cbbd"); // bb
+// Example 2:
+// Input: s = "cbbd"
+// Output: "bb"
