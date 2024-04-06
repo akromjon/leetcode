@@ -1,52 +1,69 @@
 <?php
 
-class Solution {
+class Solution
+{
 
     /**
-     * @param String $s
-     * @return Integer
+     * problem: https://leetcode.com/problems/longest-substring-without-repeating-characters
+     * date: 07.04.2024
+     * @param string $s
+     * @return int
      */
-    function lengthOfLongestSubstring($s) {
+    function lengthOfLongestSubstring($s)
+    {
 
-        $h=0;
+        $map = [];
+        $index = 0;
+        $map[$index] = "";
+        $count_of_s = strlen($s) - 1;
+        $highest_string_containing_index=0;
+        for ($i = 0; $i <= $count_of_s; $i++) {
 
-        $r=[];  
-        
-        $highest=1;
-        
-        for($c=0;$c<strlen($s);$c++){            
-            
-            for($d=$c+1;$d<strlen($s);$d++){
-                
-                if(!in_array($s[$d],$r)){
+            $map[$index] = $s[$i];
 
-                    $r[]=$s[$c];
-                    $r[]=$s[$d];                   
-                    
-                    $h++;                   
-                }else{
+            for ($n = $i + 1; $n <= $count_of_s; $n++) {
 
-                    $h=1;
-                    $r=[];
-                    $r[]=$s[$d];                   
-                } 
-                
-                if($highest<$h){
-                    $highest=$h;
-                }                  
-               
-            }      
+                $letter = $s[$n];
+                $contains = strpos($map[$index], $letter);
 
-           
-        }   
-        
-       
-        
-        return $highest;
-        
-    }   
+                if ($contains !== false) {
+                    break;
+                } else {
+                    $map[$index] = $map[$index] . $letter;
+                }
+            }
+
+            if (strlen($map[$highest_string_containing_index]) < strlen($map[$index])) {
+                $highest_string_containing_index = $index;
+            }
+
+            $index++;
+
+
+            // print_r($map);
+
+        }
+
+        return strlen($map[$highest_string_containing_index]);
+    }
 }
 
-$s=new Solution;
-// echo $s->lengthOfLongestSubstring("pwwkew"); // 3
-echo $s->lengthOfLongestSubstring("aw"); // 3
+$s = new Solution;
+echo $s->lengthOfLongestSubstring("pwwkew");
+
+
+// Example 1:
+// Input: s = "abcabcbb"
+// Output: 3
+// Explanation: The answer is "abc", with the length of 3.
+
+// Example 2:
+// Input: s = "bbbbb"
+// Output: 1
+// Explanation: The answer is "b", with the length of 1.
+
+// Example 3:
+// Input: s = "pwwkew"
+// Output: 3
+// Explanation: The answer is "wke", with the length of 3.
+// Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
