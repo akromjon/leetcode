@@ -1,6 +1,12 @@
 <?php
 
+
+
+
 /**
+ * 
+ * problem: https://leetcode.com/problems/remove-nth-node-from-end-of-list/submissions/1233366324/
+ * date: 16.04.2024
  * Definition for a singly-linked list.
  * class ListNode {
  *     public $val = 0;
