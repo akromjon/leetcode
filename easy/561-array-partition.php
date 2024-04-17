@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * beats: 100%
  * problem: https://leetcode.com/problems/array-partition/
  * date: 17.04.2024
  * @param int[] $nums
