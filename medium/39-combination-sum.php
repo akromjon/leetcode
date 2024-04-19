@@ -8,44 +8,40 @@
  * @return int[][]
  */
 
-function checkOddOrEven(int $can, int $target): bool|array
-{
-    $result = [];
-
-    if ($target % $can === 0) {
-
-        for ($i = 0; $i < $target / $can; $i++) {
-            $result[] = $can;
-        }
-
-        return $result;
-    }
-
-    return false;
-}
 function combinationSum($candidates, $target)
 {
     $result = [];
 
-    foreach ($candidates as $key => $can) {
+    $s=false;
 
-        $temp = checkOddOrEven($can, $target);
+    for ($i = 0; $i < count($candidates); $i++) {
 
-        if ($temp !== false) {
-            $result[][] = $temp;
+        $temp = $candidates[$i];       
+
+        if (array_search($target - $temp, $candidates) && !$s) {
+            $s=true;
+            $result[]= [$temp,$target-$temp];
         }
+
+        $d=$target/$temp;
+
+        if($target===$d*$temp){
+
+            $arr=[];
+            
+            for($j=0; $j<$d; $j++){
+                $arr[]=$temp;
+            }
+
+            $result[]=$arr;
+        }
+
+
     }
 
     return $result;
 }
 
-print_r(combinationSum([2, 3, 6, 7], 7));
+print_r(combinationSum([2, 3, 5, 7, 8], 8));
 
 // candidates = [2,3,6,7], target = 7
-
-/**
- * 
- * Solution:
- * - check even or odd
- * - check if it exists
- */
