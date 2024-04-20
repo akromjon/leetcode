@@ -68,11 +68,16 @@ function multiply($num1, $num2)
     }
 
     foreach($sum_array as $k=> $value){
-        
+
     }
 
     print_r($sum_array);    
 
    
 }
-echo multiply("222", "999");
+echo multiply("2222", "999");
+// 0001998
+// 0019980
+// 0199800
+// 1998000
+// 
