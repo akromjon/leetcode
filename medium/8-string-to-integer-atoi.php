@@ -22,28 +22,7 @@ function myAtoi($s)
         "9" => 9
     ];
 
-    $str="";
-
-    $is_negative=false;
-
-    for ($i = 0; $i < strlen($s); $i++) {
-
-        if($s[$i]==="-"){
-            $is_negative=true;
-        }
-
-        if($s[$i]==="+"){
-            $str=$str.$s[$i];
-        }       
-
-       
-    }
-
-    if(strpos("-",$str)!==false && strpos("+",$str)!==false){
-        return 0;
-    }    
-
-    return (int) $str;
+    
 }
 
 echo myAtoi("-+00040+1930 with words");
